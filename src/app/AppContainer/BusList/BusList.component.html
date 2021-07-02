@@ -1,0 +1,15 @@
+<div class="bus-list">
+  <div class="card-body">
+    <div class="mt-1 mb-3">
+      Wybierz linię autobusową lub przystanek aby zacząć wyszukiwanie trasy!
+    </div>
+    <div class="pb-1">
+      Linie:
+      <bus-badges [allBuses]="allBuses"></bus-badges>
+    </div>
+    <div>
+      Przystanki:
+      <busstop-badges [allBusstops]="allBusstops"></busstop-badges>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<form (ngSubmit)="onSubmit()">
+  <div for="form-group">
+    <label class="form-label"
+      >Adres email (w razie pytań będziemy chcieli się z Tobą
+      kontaktować)</label
+    >
+    <input
+      required
+      id="email"
+      type="email"
+      name="email"
+      ngModel
+      #email="ngModel"
+      class="form-control"
+    />
+    <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+      Wymagane pole
+    </div>
+  </div>
+  <div for="form-group py-3">
+    <label class="form-label">Opis błędu</label>
+    <textarea
+      required
+      minlength="5"
+      ngModel
+      name="message"
+      id="message"
+      rows="5"
+      #message="ngModel"
+      class="form-control"
+    ></textarea>
+    <div class="alert alert-danger" *ngIf="message.touched && !message.valid">
+      Powiedz nam coś więcej :(
+    </div>
+  </div>
+  <button
+    [disabled]="!email.valid || !message.valid"
+    type="submit"
+    class="my-2 btn btn-success"
+  >
+    Wyślij zgłoszenie
+  </button>
+</form>

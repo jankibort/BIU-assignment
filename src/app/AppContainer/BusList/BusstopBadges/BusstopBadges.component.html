@@ -1,0 +1,7 @@
+<a
+  *ngFor="let busstop of allBusstops"
+  class="mx-1 badge rounded-pill bg-danger action-badge"
+  routerLink="/stops/{{ busstop }}"
+>
+  {{ busstop }}
+</a>

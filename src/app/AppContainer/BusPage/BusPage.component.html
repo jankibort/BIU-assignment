@@ -1,0 +1,7 @@
+<div class="card-body">
+  Trasa autobusu linii {{ activeBus?.busNumber }} przebiega pomiędzy
+  przystankami:
+  <ul *ngIf="True">
+    <li *ngFor="let busstop of activeBus?.stops">{{ busstop }}</li>
+  </ul>
+</div>
